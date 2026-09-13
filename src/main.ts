@@ -18,18 +18,17 @@ const outputBox = document.getElementById("outputBox");
     });
   }
 
-  async function exposeClientInfo(type: string): Promise<string> {
-    if (type == "ip") {
-        const response = await fetch('https://api.ipify.org');
-        // Technically this can be done with X-forwarded-for http header but requires processing that these services provide.
-        const address = await response.text();
-        return address
-    }
-    if (type == "ua") {
-      return navigator.userAgent;
-    }
-    return `Could not retrieve ${type}`
-  }
+function newUrl(url: string): string {
+  const currentUrl = window.location.pathname;
+
+  const newPath = `${currentUrl.replace(/\/$/, '')}/${url}`;
+
+  return window.location.href = newPath;
+};
+
+  function exposeClientInfo(): string {
+  return navigator.userAgent.toString();
+}
 
   function clearOutput() {
     outputBox?.replaceChildren(output!);
@@ -44,7 +43,7 @@ const outputBox = document.getElementById("outputBox");
         output!.textContent = `
   help          Shows this help text
   rss           Goes to the RSS feed (Does nothing at the moment)
-  ip            IP-Address for current user
+  blog          WIP
   ua            Shows user-agent info (browser, OS etc.)
   cd            Show links for nerd fonts and dracula css
   ex            Show experience text
@@ -60,19 +59,13 @@ const outputBox = document.getElementById("outputBox");
         output!.style.textAlign = 'center';
         break
 
-      case "ip":
-        clearOutput();
-        exposeClientInfo(cmd).then((ip) => {
-          output!.textContent = ip
-        });
-        output!.style.textAlign = 'center';
+      case "blog":
+        newUrl("blog");
         break
 
       case "ua":
         clearOutput();
-        exposeClientInfo(cmd).then((ua) => {
-          output!.textContent = ua
-        });
+        output!.textContent = exposeClientInfo();
         output!.style.textAlign = 'center';
         break
 
