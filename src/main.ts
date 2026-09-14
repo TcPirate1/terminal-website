@@ -18,12 +18,12 @@ const outputBox = document.getElementById("outputBox");
     });
   }
 
-function newUrl(url: string): string {
+function newUrl(url: string) {
   const currentUrl = window.location.pathname;
 
   const newPath = `${currentUrl.replace(/\/$/, '')}/${url}`;
 
-  return window.location.href = newPath;
+  window.location.href = newPath;
 };
 
   function exposeClientInfo(): string {
