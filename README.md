@@ -15,4 +15,4 @@
 - [ ] Learn about RSS feeds. https://www.rssboard.org/files/sample-rss-2.xml is an example of what a feed should look like. [Wikihow](https://www.wikihow.com/Create-an-RSS-Feed), haha I know. [Rss specifications themselves](https://www.rssboard.org/rss-specification), this link is also what I'd follow if I want to create a generator at some point. [Autodiscovery](https://www.rssboard.org/rss-autodiscovery) specifically for browsers. [Language codes](https://www.rssboard.org/rss-language-codes). **Dates**: Thu, 15 Oct 2007 (24 hour time including seconds) utc/gmt. *guid* is a string and is up to the person what this is.
 - [x] The user agent text doesn't wrap neatly.
 - [x] Look into `import.meta.glob`, can probably import text files with this. https://vite.dev/guide/features#glob-import
-- [ ] Create cool animation for loading blog site.
+- [ ] Create cool animation for loading blog site. https://codepen.io/charbel1/pen/wvNogOp
