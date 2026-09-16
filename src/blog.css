@@ -24,6 +24,13 @@ h1 {
   text-align: center;
 }
 
+button {
+  align-self: center;
+}
+
 footer {
   border-top: 1px solid var(--purple);
+  text-align: center;
 }
+
+/* Animation */

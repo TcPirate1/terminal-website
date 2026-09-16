@@ -20,6 +20,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+#matrix {
+  position: absolute;
+  z-index: 1;
+}
+
 p, #output {
   font: 18px/145% var(--font-family);
   text-align: center;

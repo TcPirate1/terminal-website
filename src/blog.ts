@@ -12,6 +12,7 @@ if (!container) {
 
 if (Object.entries(contentFiles).length === 0) {
   const error = document.createElement('p');
+  error.style.textAlign = "center";
   error.textContent = "No posts";
   container.appendChild(error);
 };
