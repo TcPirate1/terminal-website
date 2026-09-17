@@ -6,14 +6,19 @@
     <link rel="stylesheet" href="src/style.css"/>
     <link rel="stylesheet" href="dracula.min.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" src="./src/main.ts" async defer></script>
+    <script type=""></script>
+    <script type="module" src="./src/main.ts" async></script>
     <title>TC's website</title>
   </head>
-  <body>
+  <body id="matrix-container">
+    <canvas id="matrix"></canvas>
     <h1>Type help to show list of pages</h1>
-    <div class="terminal">
-      <span class="userProfile">TC@portfolio:~ $</span>
-      <input autofocus id="cmdinput"/>
+    <div class="pid">
+      <p>Agent pid 2419</p>
+      <div class="terminal">
+        <span class="userProfile">TC@portfolio:~ $</span>
+        <input autofocus id="cmdinput"/>
+      </div>
     </div>
     <div class="output-box" id="outputBox">
       <pre id="output"></pre>
