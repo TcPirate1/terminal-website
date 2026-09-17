@@ -20,6 +20,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.pid {
+  display: flex;
+  flex-direction: column;
+}
+
 #matrix {
   position: absolute;
   top: 0;
