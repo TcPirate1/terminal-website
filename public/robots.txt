@@ -1,0 +1,3 @@
+User-agent: *
+allow: /
+sitemap: https://tcpirate1.github.io/terminal-website/sitemap.txt
