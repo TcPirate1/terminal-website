@@ -13,7 +13,7 @@ export default function sitemapGeneration(): Plugin {
             config = resolvedConfig;
         },
         closeBundle() {
-            const outputDir = config.base;
+            const outputDir = config.build.outDir;
             const outputPath = "public/sitemap.xml";
             try {
                 const files = fs.readdirSync(outputDir).filter(file => path.extname(file) === fileExtension).map(file => path.join(outputDir, file));
