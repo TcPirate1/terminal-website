@@ -41,8 +41,10 @@ function animateMatrix(): void {
   const animationId = requestAnimationFrame(animateMatrix);
   setTimeout(() => {
     cancelAnimationFrame(animationId);
+    if (canvasContainer.contains(canvas)) {
     canvasContainer.removeChild(canvas);
-  }, 5000);
+    }
+  }, 3000);
 }
 
 animateMatrix();
