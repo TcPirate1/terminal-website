@@ -1,3 +1,15 @@
+const msg = document.querySelector(".msg") as HTMLElement;
+const msgContainer = document.querySelector(".container") as HTMLElement;
+
+setTimeout(() => {
+  msg.style.background = "limegreen";
+  msg.innerHTML = "Blog found";
+  msg.style.boxShadow = "0 0 30px limegreen";
+  setTimeout(() => {
+    msgContainer.style.display = "none";
+  }, 2000);
+}, 5000);
+
 const contentFiles = import.meta.glob('./posts/*.txt', {
   query: '?raw',
   import: 'default',

@@ -19,7 +19,6 @@
 - [x] Create cool animation for loading blog site. https://codepen.io/charbel1/pen/wvNogOp, needs to be converted to typescript, need to also figure out how to transition them properly. Would change the text for this one (https://codepen.io/vaibhav-khating/pen/jOKJONP) but could be used for the mock login.
 
 ### Roadmap
-- Blog page
 - RSS feed
 - Mock login/Multi-factor authentication flow
 - RSS aggregator
