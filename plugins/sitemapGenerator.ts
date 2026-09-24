@@ -1,4 +1,4 @@
-import { resolve, join, extname } from "node:path";
+import { resolve, join, extname, basename } from "node:path";
 import { readdirSync, writeFileSync } from "node:fs";
 import type { Plugin, ResolvedConfig } from "vite";
 
@@ -21,7 +21,7 @@ export default function sitemapGeneration(): Plugin {
             try {
                 const files = readdirSync(outputDir).filter((file: string) => extname(file) === fileExtension).map((file: string) => join(outputDir, file));
                 const urls = files.map((file: string) => {
-                    const route = file === "index.html" ? "" : `/${file.replace(/\.html$/, "")}`;
+                    const route = file === "index.html" ? "" : `/${basename(file, ".html")}`;
                     return `  <url>
     <loc>https://tcpirate1.github.io/terminal-website${route}</loc>
   </url>`;
