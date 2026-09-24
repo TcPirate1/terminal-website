@@ -8,6 +8,11 @@ on:
       - '.gitignore'
       - 'LICENSE'
       - '**.md'
+
+permissions:
+  contents: write
+  pages: write
+
 jobs:
   build:
     name: Build
