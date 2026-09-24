@@ -1,6 +1,6 @@
-import path from "node:path";
-import fs from "node:fs";
-import { Plugin, ResolvedConfig } from "vite";
+import { resolve, join, extname } from "node:path";
+import { readdirSync, writeFileSync } from "node:fs";
+import type { Plugin, ResolvedConfig } from "vite";
 
 const fileExtension = ".html";
 
@@ -13,14 +13,17 @@ export default function sitemapGeneration(): Plugin {
             config = resolvedConfig;
         },
         closeBundle() {
-            const outputDir = config.base;
-            const outputPath = "public/sitemap.xml";
+            const outputDir = resolve(
+                config.root,
+                config.build.outDir
+            );
+            const outputPath = join(config.build.outDir, "sitemap.xml");
             try {
-                const files = fs.readdirSync(outputDir).filter(file => path.extname(file) === fileExtension).map(file => path.join(outputDir, file));
-                const urls = files.map(file => {
+                const files = readdirSync(outputDir).filter((file: string) => extname(file) === fileExtension).map((file: string) => join(outputDir, file));
+                const urls = files.map((file: string) => {
                     const route = file === "index.html" ? "" : `/${file.replace(/\.html$/, "")}`;
                     return `  <url>
-    <loc>${config.base}${route}</loc>
+    <loc>https://tcpirate1.github.io/terminal-website${route}</loc>
   </url>`;
                 });
                 
@@ -30,7 +33,7 @@ ${urls.join("\n")}
 </urlset>
 `;
 
-                fs.writeFileSync(outputPath, sitemap, "utf-8");
+                writeFileSync(outputPath, sitemap, "utf-8");
             }
             catch (err) {
                 console.error(err);
