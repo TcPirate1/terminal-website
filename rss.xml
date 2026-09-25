@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
-  <channel>
-    <title>TC&apos;s blog</title>
-    <link>https://tcpirate1.github.io/terminal-website</link>
-    <description>A place for my thoughts</description>
-
-    <item>
-      <title>first-post</title>
-      <link>https://tcpirate1.github.io/terminal-website/posts/first-post</link>
-      <guid>https://tcpirate1.github.io/terminal-website/posts/first-post</guid>
-      <description>Hello everyone!
+    <rss version="2.0">
+      <channel>
+        <title>TC&apos;s blog</title>
+        <link>https://tcpirate1.github.io/terminal-website</link>
+        <description>A place for my thoughts</description>
+    
+        <item>
+          <title>first-post</title>
+          <link>https://tcpirate1.github.io/terminal-website/blog</link>
+          <guid isPermaLink="false">first-post</guid>
+          <description>Hello everyone!
 
 This is just a test blog of sorts because while I did test the functionality of outputting the blog posts,
 onto the page, and haven&apos;t actually tested with an actual writing of anything.
@@ -37,6 +37,7 @@ an excuse to put my writings onto something as I&apos;ve enjoyed writing and som
 
 Thanks for reading,
 TC</description>
-    </item>
-  </channel>
-</rss>
+        </item>
+      </channel>
+    </rss>
+    
