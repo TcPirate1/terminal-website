@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="terminal-bash.svg" />
+    <link rel="stylesheet" href="src/login.css"/>
+    <link rel="stylesheet" href="dracula.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="./src/login.ts" async></script>
+    <title>Mock login form</title>
+  </head>
+  <body>
+    <form id="mock-login" method="post">
+        <label class="labelname">Mock name</label>
+        <input name="username" type="text">
+        <span id="error-name"></span>
+        <label class="labelpw">Mock password</label>
+        <input name="pw" type="password">
+        <span id="error-pw"></span>
+        <div class="remember-me">
+            <input name="remember_me" type="checkbox">
+            <label>Remember me</label>
+        </div>
+        <button type="submit">Login</button>
+        <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>

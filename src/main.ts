@@ -93,8 +93,10 @@ function newUrl(url: string) {
       case "help":
         output!.textContent = `
   help          Shows this help text
-  rss           Goes to the RSS feed (Does nothing at the moment)
-  blog          WIP
+  sitemap       View the sitemap
+  rss           View the RSS feed
+  blog          Navigate to blog
+  login         Navigate to mock login page
   ua            Shows user-agent info (browser, OS etc.)
   cd            Show links for nerd fonts and dracula css
   ex            Show experience text
@@ -105,13 +107,19 @@ function newUrl(url: string) {
         break;
 
       case "rss":
-        clearOutput();
-        output!.textContent = "This does nothing at the moment."
-        output!.style.textAlign = 'center';
+        newUrl("rss.xml");
+        break
+
+      case "sitemap":
+        newUrl("sitemap.xml");
         break
 
       case "blog":
-        newUrl("blog");
+        newUrl(cmd);
+        break
+
+      case "login":
+        newUrl(cmd);
         break
 
       case "ua":

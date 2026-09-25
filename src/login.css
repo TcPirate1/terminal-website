@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "Hack Nerd";
+    src: url("./assets/Hack/HackNerdFont-Regular.ttf");
+  }
+@font-face {
+  font-family: "Symbols Nerd";
+  src: url("./assets/NerdFontsSymbolsOnly/SymbolsNerdFont-Regular.ttf");
+}
+:root {
+  --purple: #aa3bff;
+  --dark-purple: rgba(170, 59, 255, 0.5);
+
+  --font-family: "Hack Nerd", "Symbols Nerd", monospace, system-ui;
+
+  font: 18px/145% var(--font-family);
+  color-scheme: light dark;
+  font-synthesis: unset;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.remember-me {
+  display: flex;
+  gap: 6px;
+  padding: 5px;
+}
+
+form {
+  width: 50%;
+}
+
+.labelname, .labelpw {
+  padding: 5px;
+}
+
+#error-name, #error-pw {
+  color: red;
+  font-style: italic;
+}

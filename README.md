@@ -22,5 +22,4 @@
 ### Roadmap
 - Mock login/Multi-factor authentication flow
 - RSS aggregator
-- Web server???
 - Game???
