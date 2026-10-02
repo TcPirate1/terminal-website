@@ -28,6 +28,10 @@ p {
   white-space: pre-line;
 }
 
+button {
+  margin-bottom: 10px;
+}
+
 footer {
   border-top: 1px solid var(--purple);
   text-align: center;

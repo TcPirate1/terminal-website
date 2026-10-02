@@ -7,13 +7,13 @@
   src: url("./assets/NerdFontsSymbolsOnly/SymbolsNerdFont-Regular.ttf");
 }
 :root {
-  --purple: #aa3bff;
-  --dark-purple: rgba(170, 59, 255, 0.5);
+  --pink: #F5C2E7;
+  --lavender: #B4BEFE;
 
   --font-family: "Hack Nerd", "Symbols Nerd", monospace, system-ui;
 
   font: 18px/145% var(--font-family);
-  color-scheme: light dark;
+  color-scheme: normal;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -43,8 +43,8 @@ p, #output {
   display: flex;
   justify-content: center;
 }
-.terminal span {
-  color: var(--purple);
+.terminal span { 
+  color: var(--pink);
 }
 
 .userProfile {
@@ -57,9 +57,10 @@ p, #output {
   max-width: 400px;
   border: none;
   background-color: transparent;
-  caret-color: var(--dark-purple);
+  caret-color: var(--lavender);
   caret-shape: block;
   padding-left: 5px;
+  color: var(--lavender);
 }
 #cmdinput:focus {
   outline: none;

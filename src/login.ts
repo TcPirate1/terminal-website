@@ -1,3 +1,4 @@
+import confetti from "canvas-confetti";
 const form = document.getElementById('mock-login') as HTMLFormElement;
 const nameInput = document.getElementById('error-name');
 const pwInput = document.getElementById('error-pw');
@@ -22,5 +23,10 @@ form?.addEventListener("submit", (e) => {
     }
     else {
         pwInput!.textContent = "Password should not be empty";
+    }
+    if (name && pw) {
+        confetti({
+            disableForReducedMotion: true
+        });
     }
 })
