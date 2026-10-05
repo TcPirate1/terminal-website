@@ -13,7 +13,7 @@ export default function rssPlugin(): Plugin {
     return {
         name: "generate-rss",
         apply: "build",
-        async generateBundle() {
+        async closeBundle() {
           const postsDir = resolve('src/posts')
 
           const files = await readdir(postsDir)
