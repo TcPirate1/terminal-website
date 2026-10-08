@@ -1,6 +1,8 @@
+import { creationDate } from "virtual:blogdates";
 const msg = document.querySelector(".msg") as HTMLElement;
 const msgContainer = document.querySelector(".container") as HTMLElement;
 
+console.log(creationDate);
 setTimeout(() => {
   msg.style.background = "limegreen";
   msg.innerHTML = "Blog found";
