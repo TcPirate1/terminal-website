@@ -2,7 +2,6 @@ import { creationDate } from "virtual:blogdates";
 const msg = document.querySelector(".msg") as HTMLElement;
 const msgContainer = document.querySelector(".container") as HTMLElement;
 
-console.log(creationDate);
 setTimeout(() => {
   msg.style.background = "limegreen";
   msg.innerHTML = "Blog found";
@@ -45,7 +44,8 @@ for (const [path, content] of Object.entries(contentFiles)) {
   const h2 = document.createElement('summary');
   h2.style.fontSize = '1.5rem';
   h2.style.cursor = 'pointer';
-  h2.textContent = heading;
+  const date = creationDate[filename];
+  h2.textContent = date ? `${heading} (${date})` : heading;
 
   const paragraph = document.createElement('p');
   paragraph.textContent = content.trim();
