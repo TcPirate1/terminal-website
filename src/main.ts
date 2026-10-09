@@ -69,13 +69,16 @@ const outputBox = document.getElementById("outputBox");
     });
   }
 
-function newUrl(url: string) {
-  const currentUrl = window.location.pathname;
+function newUrl(url: string): void {
+  const segment = url.trim();
 
-  const newPath = `${currentUrl.replace(/\/$/, '')}/${url}`;
+  if (!segment || segment === "." || segment === ".." || /[/\\?#%]/.test(segment)) {
+    throw new Error("Invalid URL segment");
+  }
 
-  window.location.href = newPath;
-};
+  const currentPath = window.location.pathname.replace(/\/+$/, "");
+  window.location.assign(`${currentPath}/${encodeURIComponent(segment)}`);
+}
 
   function exposeClientInfo(): string {
   return navigator.userAgent.toString();
