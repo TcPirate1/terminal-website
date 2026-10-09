@@ -7,6 +7,7 @@ export default function getDates(): Plugin {
 	const resolvedId = '\0' + virtualId;
 	return {
 		name: "Blog Dates",
+		apply: "build",
 		resolveId(id) {
 			if (id === virtualId) {
 				return resolvedId;
