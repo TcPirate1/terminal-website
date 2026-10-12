@@ -1,5 +1,5 @@
 # New Portfolio Website
-
+[![Deploy](https://github.com/TcPirate1/terminal-website/actions/workflows/deploy.yml/badge.svg)](https://github.com/TcPirate1/terminal-website/actions/workflows/deploy.yml)
 ### Dracula theme
 - Cheatsheet - https://draculatheme.com/dracula-css
 
@@ -17,7 +17,7 @@
 - [x] The user agent text doesn't wrap neatly.
 - [x] Look into `import.meta.glob`, can probably import text files with this. https://vite.dev/guide/features#glob-import
 - [x] Create cool animation for loading blog site. https://codepen.io/charbel1/pen/wvNogOp, needs to be converted to typescript, need to also figure out how to transition them properly. Would change the text for this one (https://codepen.io/vaibhav-khating/pen/jOKJONP) but could be used for the mock login.
-- [ ] Add dates for blogs.
+- [x] Add dates for blogs.
 
 ### Roadmap
 - RSS aggregator
