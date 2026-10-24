@@ -1,4 +1,5 @@
 import { creationDate } from "virtual:blogdates";
+import weather from "virtual:weather";
 const msg = document.querySelector(".msg") as HTMLElement;
 const msgContainer = document.querySelector(".container") as HTMLElement;
 
@@ -42,10 +43,18 @@ for (const [path, content] of Object.entries(contentFiles)) {
 
   const details = document.createElement('details');
   const h2 = document.createElement('summary');
-  h2.style.fontSize = '1.5rem';
+  h2.style.fontSize = '1.2rem';
+  h2.style.whiteSpace = 'pre-wrap';
   h2.style.cursor = 'pointer';
+  h2.style.textAlign = 'center';
+  const todayDate = new Date().toISOString().split('T')[0];
   const date = creationDate[filename];
-  h2.textContent = date ? `${heading} (${date})` : heading;
+  if (date === todayDate) {
+    h2.textContent = `${heading}, (${date})\n ${weather}`;
+  }
+  else {
+    h2.textContent = date ? `${heading} (${date})` : heading;
+  } 
 
   const paragraph = document.createElement('p');
   paragraph.textContent = content.trim();
