@@ -12,7 +12,8 @@
 - [Can ignore specific files using paths or paths-ignore](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#onpushpull_requestpull_request_targetpathspaths-ignore), can also be done with branches.
 
 ### TODO
-- [ ] Write about weather functionality (There is a bug where it doesn't work properly on the live website - all posts have weather data)
+- [ ] Write about weather functionality
+- [ ] Blog dates are always the build time, not it's creation time. I think it's because there is a problem with the action replacing the files.
 - [ ] Rss aggregator
 
 ### Roadmap
