@@ -1,0 +1,10 @@
+So why even make a website?
+
+As I've said in the first post that I wanted a place to put my writing but there are other reasons.
+
+I could do other projects, however the problem I have encountered time and time again is that I absolutely dislike setting up a project.
+Therefore the least amount of time I spend on said setup, the more likely I will not drop the project before a single line of code is even written.
+
+Web, technically speaking has just as much if not more than non-web projects. That's if I wanted to setup the whole infrastructure myself,
+which I definitely do not. I am using GitHub to host the website, removing the need to create my own web server, find a hosting site and buy a domain name.
+Say what you will about it but this is about finding the least friction with setup, which GitHub is for me.

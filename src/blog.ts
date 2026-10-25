@@ -1,4 +1,4 @@
-import { creationDate } from "virtual:blogdates";
+import creationDate from "./blog-dates.json";
 import weather from "virtual:weather";
 const msg = document.querySelector(".msg") as HTMLElement;
 const msgContainer = document.querySelector(".container") as HTMLElement;
@@ -11,6 +11,8 @@ setTimeout(() => {
     msgContainer.style.display = "none";
   }, 2000);
 }, 5000);
+
+const blogDates: Record<string, string> = creationDate;
 
 const contentFiles = import.meta.glob('./posts/*.txt', {
   query: '?raw',
@@ -48,13 +50,15 @@ for (const [path, content] of Object.entries(contentFiles)) {
   h2.style.cursor = 'pointer';
   h2.style.textAlign = 'center';
   const todayDate = new Date().toISOString().split('T')[0];
-  const date = creationDate[filename];
+  const date = blogDates[filename];
   if (date === todayDate) {
     h2.textContent = `${heading}, (${date})\n ${weather}`;
   }
   else {
     h2.textContent = date ? `${heading} (${date})` : heading;
-  } 
+  }
+
+  console.log(date);
 
   const paragraph = document.createElement('p');
   paragraph.textContent = content.trim();
