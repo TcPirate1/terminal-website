@@ -1,5 +1,5 @@
 import { resolve, join } from "node:path";
-import { stat, readdir, writeFile } from "node:fs/promises";
+import { readdir, writeFile } from "node:fs/promises";
 import { execSync } from "node:child_process";
 import type { Plugin } from "vite";
 
@@ -17,7 +17,7 @@ export default function getDates(): Plugin {
 						continue
 					}
 					const filePath = join(postsDir, file.name);
-					entries[file.name] = execSync(`git log -1 --format=%cd --date=short main -- ${filePath}`).toString().trim();
+					entries[file.name] = execSync(`git log -1 --format=%cs-- ${filePath}`).toString().trim();
 
 					await writeFile(outputFile, JSON.stringify(entries, null, 2), "utf-8");
 				}
