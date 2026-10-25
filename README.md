@@ -12,9 +12,7 @@
 - [Can ignore specific files using paths or paths-ignore](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#onpushpull_requestpull_request_targetpathspaths-ignore), can also be done with branches.
 
 ### TODO
-- [ ] Revert blog dates to old dates. Revert change to GitHub Actions, then revert posts dir to previous version, place `keep_files` back into GitHub Actions.
 - [ ] Create own workflow to not depend on GitHub's built in ones that aren't getting updated.
-- [ ] Write about weather functionality
 - [ ] Rss aggregator
 
 ### Roadmap
