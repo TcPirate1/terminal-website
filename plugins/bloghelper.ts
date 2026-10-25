@@ -17,7 +17,7 @@ export default function getDates(): Plugin {
 						continue
 					}
 					const filePath = join(postsDir, file.name);
-					entries[file.name] = execSync(`git log -1 --format=%cd --date=short -- ${filePath}`).toString().trim();
+					entries[file.name] = execSync(`git log -1 --format=%cd --date=short main -- ${filePath}`).toString().trim();
 
 					await writeFile(outputFile, JSON.stringify(entries, null, 2), "utf-8");
 				}
